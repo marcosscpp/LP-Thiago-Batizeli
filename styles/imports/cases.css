@@ -1,0 +1,173 @@
+.cases {
+  margin: 40px 0;
+}
+
+.cases__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.cases__header {
+  text-align: center;
+  text-wrap: balance;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.cases__header h2 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.cases__header p {
+  font-size: 1.1rem;
+}
+
+.case {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  background: linear-gradient(
+    to bottom right,
+    rgba(23, 255, 255, 1),
+    rgba(28, 31, 31, 0.5)
+  );
+
+  clip-path: polygon(29% 0, 100% 0, 71% 100%, 0 100%);
+  margin: 0 -18%;
+  position: relative;
+  height: 380px;
+}
+
+.case__content {
+  width: fit-content;
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  top: 10px;
+}
+
+.case__name {
+  color: var(--g01);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.case__image {
+  transform: translateZ(20px);
+  position: absolute;
+  bottom: 0;
+}
+
+.case__image,
+.case__image img {
+  width: 280px;
+  height: 300px;
+}
+
+.case__image img {
+  object-fit: cover;
+  object-position: 40% 50%;
+}
+
+@media (max-width: 1200px) {
+  .cases__list {
+    width: 90%;
+  }
+  .case__name {
+    font-size: 20px;
+  }
+
+  .case__image,
+  .case__image img {
+    width: 260px;
+    height: 280px;
+  }
+
+  .case__image img {
+    object-position: 52% -5%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cases__list {
+    gap: 10px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .case {
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    flex-direction: column-reverse;
+    display: flex;
+    width: 100%;
+  }
+
+  .case__image,
+  .case__content {
+    position: static;
+    transform: translate(0);
+  }
+
+  .case__image {
+    align-self: center;
+    height: 85%;
+    width: 63%;
+  }
+
+  .case__image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .case__content {
+    align-self: center;
+    width: 38em;
+  }
+
+  .case__name {
+    font-size: clamp(20px, 4.2vw, 42px);
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .case {
+    gap: 12px;
+  }
+  .case__image {
+    width: 100%;
+  }
+
+  .case__image img {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 560px) {
+  .case {
+    height: 300px;
+  }
+
+  .case__content {
+    width: 20em;
+  }
+}
+
+@media (max-width: 340px) {
+  .case {
+    width: 85%;
+  }
+
+  .cases__list {
+    width: 96%;
+  }
+}

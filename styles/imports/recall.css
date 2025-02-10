@@ -1,0 +1,62 @@
+.recall {
+  background: linear-gradient(0deg, #17ffff, #ffffff 80%);
+  border-radius: 10px;
+  color: var(--g03);
+  margin: 60px 0 20px 0;
+  padding: 20px;
+  text-align: center;
+  text-wrap: balance; 
+  position: relative;
+  z-index: 0;
+}
+
+.recall__title {
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.recall__text {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.recall__button {
+  background: var(--g01);
+  border-radius: 5px;
+  color: inherit;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 25px;
+}
+
+.recall__note {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 20px auto 0 auto;
+  width: 26em;
+}
+
+@media (max-width: 900px) {
+  .recall {
+    border-radius: 0;
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .recall__title {
+    margin-top: 8px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .recall {
+    font-size: 12px;
+  }
+}
